@@ -28,7 +28,7 @@ const LandingPage = () => {
               stylish African printwear. Embrace the vibrant colors, bold
               patterns, and rich heritage of African fashion.
             </p>
-            <Link>
+            <Link to="/shop">
               <button className="px-5 py-2 rounded-4 border-0 text-white">
                 Shop Now
               </button>
@@ -40,7 +40,7 @@ const LandingPage = () => {
               stylish African printwear. Embrace the vibrant colors, bold
               patterns, and rich heritage of African fashion.
               <br />
-              <Link className="mx-auto">
+              <Link className="mx-auto" to="/shop">
                 <button className="px-5 py-2 rounded-4 border-0 text-white desktopbtn">
                   Shop Now
                 </button>

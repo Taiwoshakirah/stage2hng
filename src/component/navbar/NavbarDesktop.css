@@ -1,50 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
 
-.logo {
-    font-weight: 400;
-    line-height: 70.94px;
-    font-family: "Kurale", serif;
-    color: #fff;
-    padding-left: 50px;
-  }
+.nav-desk {
+  background-color: #007bff;
+}
 
-  .nav-desk{
-    background-color: #007bff;
-  }
+.afric-font {
+  font-family: "Kurale", serif;
+}
 
-  .cc-search {
-    margin-bottom: 0 !important;
-  }
- 
-  .input{
-    width: 250px;
-    margin-left: 60px;
-    background-color: #DDD9D666;
-    border: none;
-  }
+.cc-search {
+  margin-bottom: 0 !important;
+}
 
-  .nav-links li{
-    list-style: none;
-  }
-  .nav-links li a{
-    text-decoration: none;
-    color: white;
-  }
-  ul{
-    margin-left: -2px;
-  }
-  .search{
-    right: 53px;
-    top: 12px;
-  }
+.input-group {
+  align-items: center;
+}
 
-  .input::placeholder{
-    color: white;
-  }
-  .afric-font {
-    font-family: 'Kurale', serif;
-  }
-  .our-product{
-    color: #007bff;
-    font-family: 'Kurale', serif;
-  }
+.input-group-text {
+  background-color: rgba(221, 217, 214, 0.4);
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.input-group .form-control {
+  background-color: rgba(221, 217, 214, 0.4);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.input-group .form-control:focus {
+  box-shadow: none;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.input-group .form-control,
+.input-group-text {
+  height: calc(1.5em + 1rem + 2px);
+}

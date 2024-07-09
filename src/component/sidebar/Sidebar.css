@@ -1,0 +1,15 @@
+li{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.half-width .offcanvas{
+    width: 50% !important;
+}
+
+.half-width .offcanvas-start {
+    width: 50% !important;
+  }

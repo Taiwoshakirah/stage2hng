@@ -26,7 +26,7 @@ const NavbarDesktop = () => {
           </Link>
         </div>
         <section className="d-flex align-items-center gap-3">
-          <div class="input-group">
+          <div class="input-group align-items-center">
             <input
               type="text"
               className="form-control cc-search"

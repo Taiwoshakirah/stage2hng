@@ -22,8 +22,8 @@ const NavbarMobile = () => {
             <input
               type="text"
               className="form-control cc-search"
-              placeholder="Recipient's username"
-              aria-label="Recipient's username"
+              placeholder="Search..."
+              aria-label="Search..."
               aria-describedby="basic-addon2"
             />
             <span class="input-group-text" id="basic-addon2">
