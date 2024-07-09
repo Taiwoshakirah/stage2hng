@@ -137,6 +137,15 @@
   padding: 20px;
 }
 
+@media(width<768px){
+  .seemorebtn {
+    width: 28%;
+    margin-left: 30%;
+    background-color: #0056d2;
+    border: none;
+  }
+}
+
 .product {
   padding: 10px;
   border-radius: 10px;

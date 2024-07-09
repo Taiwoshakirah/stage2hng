@@ -4,9 +4,9 @@ import gown1 from "../assets/images/gown1.png";
 import gown2 from "../assets/images/gown2.png";
 import gown3 from "../assets/images/gown3.png";
 import southy from "../assets/images/southafricastyle.png";
-import tommygown from "../assets/images/withtummybelt.png";
-import sexygown from "../assets/images/sexygown.png";
-import deeperlife from "../assets/images/deeperlife.png";
+import tommygown from "../assets/images/gown1.png";
+import sexygown from "../assets/images/southafricastyle.png";
+import deeperlife from "../assets/images/twopiece.png";
 import rating from "../assets/images/rating.png";
 import ratingnone from "../assets/images/ratingnone.png";
 

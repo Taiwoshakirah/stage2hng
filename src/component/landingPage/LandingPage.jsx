@@ -21,14 +21,14 @@ const LandingPage = () => {
     <div>
       <section>
         <header>
-          <img className="d-lg-none" src={mobile} alt="" />
+          <img className="d-lg-none w-100" src={mobile} alt="" />
           <div className="d-lg-none flex-column text-center pt-4 africhic">
             <p>
               Welcome to AfriChic, your ultimate destination for authentic and
               stylish African printwear. Embrace the vibrant colors, bold
               patterns, and rich heritage of African fashion.
             </p>
-            <Link to="/shop">
+            <Link className="text-decoration-none" to="/shop">
               <button className="px-5 py-2 rounded-4 border-0 text-white">
                 Shop Now
               </button>
@@ -40,7 +40,7 @@ const LandingPage = () => {
               stylish African printwear. Embrace the vibrant colors, bold
               patterns, and rich heritage of African fashion.
               <br />
-              <Link className="mx-auto" to="/shop">
+              <Link className="mx-auto text-decoration-none" to="/shop">
                 <button className="px-5 py-2 rounded-4 border-0 text-white desktopbtn">
                   Shop Now
                 </button>
@@ -101,7 +101,7 @@ const LandingPage = () => {
           <div key={id} className="product">
             <div>
               <img className="mt-5 px-4 mw-100" src={image} alt={description} />
-              <Link to="/cart">
+              <Link className="text-decoration-none" to="/cart">
                 <button className="addcartbtn py-2 text-white">
                   Add To Cart
                 </button>
@@ -121,7 +121,7 @@ const LandingPage = () => {
       </section>
 
       <div className="container cover">
-        <Link className=" mt-5 seemorebtn py-2 rounded-3 text-white w-75 px-3">
+        <Link className="text-decoration-none mt-5 seemorebtn py-2 rounded-3 text-white w-75 px-3">
           See More
           <GrommetIconsFormNextLink style={{ marginLeft: "8px" }} />
         </Link>
@@ -132,7 +132,7 @@ const LandingPage = () => {
           <div>
             <div className="d-flex flex-column ">
               <img src={Zipgown} alt="" />
-              <Link to="/cart">
+              <Link className="text-decoration-none" to="/cart">
                 <button className="w-100 px-3">Add Cart</button>
               </Link>
             </div>
@@ -149,7 +149,7 @@ const LandingPage = () => {
           <div>
             <div className="d-flex flex-column">
               <img src={redgown} alt="" />
-              <Link to="/cart">
+              <Link className="text-decoration-none" to="/cart">
                 <button className="w-100 px-3">Add Cart</button>
               </Link>
             </div>
@@ -166,7 +166,7 @@ const LandingPage = () => {
           <div>
             <div className="d-flex flex-column">
               <img src={kimono} alt="" />
-              <Link to="/cart">
+              <Link className="text-decoration-none" to="/cart">
                 <button className="w-100 px-3">Add Cart</button>
               </Link>
             </div>
@@ -183,7 +183,7 @@ const LandingPage = () => {
           <div>
             <div className="d-flex flex-column">
               <img src={mixgown} alt="" />
-              <Link to="/cart">
+              <Link className="text-decoration-none" to="/cart">
                 <button className="w-100 px-3">Add Cart</button>
               </Link>
             </div>
@@ -202,9 +202,9 @@ const LandingPage = () => {
       <p className="text-center category container">Browse By Category</p>
       <section className="container">
         <div className="d-flex overflow-auto justify-content-between gap-5 mb-5 px-4 mt-5">
-          <img src={bagimg} alt="" />
           <img src={earing} alt="" />
-          <img src={bagimg} alt="" />
+          <img src={earing} alt="" />
+          <img src={earing} alt="" />
           <img src={earing} alt="" />
         </div>
       </section>
