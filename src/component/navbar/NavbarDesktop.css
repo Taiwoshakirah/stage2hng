@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+
+.logo {
+    font-weight: 400;
+    line-height: 70.94px;
+    font-family: "Kurale", serif;
+    color: #fff;
+    padding-left: 50px;
+  }
+
+  .nav-desk{
+    background-color: #007bff;
+  }
+
+  .cc-search {
+    margin-bottom: 0 !important;
+  }
+ 
+  .input{
+    width: 250px;
+    margin-left: 60px;
+    background-color: #DDD9D666;
+    border: none;
+  }
+
+  .nav-links li{
+    list-style: none;
+  }
+  .nav-links li a{
+    text-decoration: none;
+    color: white;
+  }
+  ul{
+    margin-left: -2px;
+  }
+  .search{
+    right: 53px;
+    top: 12px;
+  }
+
+  .input::placeholder{
+    color: white;
+  }
+  .afric-font {
+    font-family: 'Kurale', serif;
+  }
+  .our-product{
+    color: #007bff;
+    font-family: 'Kurale', serif;
+  }

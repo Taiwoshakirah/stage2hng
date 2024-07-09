@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cart-container {
+    width: 90%;
+    margin: 0 auto;
+    
+  }
+  
+  .cart-header,
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-header {
+    border-bottom: 0.5px solid #ddd;
+  }
+  
+  .cart-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+  
+  
+  .cart-total {
+    border: 0.5px solid #ddd;
+    padding: 20px;
+  }
+ 
+  .updatenow{
+    border:0.5px solid #007bff;
+    background-color: transparent;
+    padding: 5px 10px;
+  }
+  .return{
+    border:0.5px solid #007bff;
+    background-color: transparent;
+    padding: 8px 15px;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    gap: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .coupon {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .coupon button{
+    background-color:#007bff;
+    border: none;
+    color: white;
+    padding: 8px;
+  }
+  
+  .checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  @media(min-width:768px){
+    .cartbox{
+      width: 90%;
+      max-width: 1440px;
+      margin: auto;
+      justify-content: space-between;
+    }
+    h1{
+      color: #007bff;
+      font-family: "Kurale", serif;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 47.3px;
+      margin-left: 50px;
+    }
+    .cartwith{
+      flex: 1;
+      margin-right: 200px;
+    }
+  }

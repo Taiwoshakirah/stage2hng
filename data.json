@@ -1,0 +1,83 @@
+[
+    {
+        "id":1,
+        "image":"./src/assets/images/twopiece.png",
+        "description":"Ibadan bliss set",
+        "price": "NGN 25,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":2,
+        "image":"./src/assets/images/twopiece2.png",
+        "description":"Adire Vibrance Gown",
+        "price": "NGN 18,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":3,
+        "image":"./src/assets/images/gown1.png",
+        "description":"Lagos Chic Bliss Dress",
+        "price": "NGN 35,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":4,
+        "image":"./src/assets/images/gown2.png",
+        "description":"Prestige Gown",
+        "price": "NGN 25,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":5,
+        "image":"./src/assets/images/gown3.png",
+        "description":"Naija Glamor Gown",
+        "price": "NGN 25,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":6,
+        "image":"./src/assets/images/southafricastyle.png",
+        "description":"Kente Joy Dress",
+        "price": "NGN 25,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":7,
+        "image":"./src/assets/images/withtummybelt.png",
+        "description":"Aba Splendor Set",
+        "price": "NGN 15,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":8,
+        "image":"./src/assets/images/sexygown.png",
+        "description":"Kitenge Radiance",
+        "price": "NGN 18,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    },
+    {
+        "id":9,
+        "image":"./src/assets/images/deeperlife.png",
+        "description":"Abuja Charm Gown",
+        "price": "NGN 25,000",
+        "ratingimg":"./src/assets/images/rating.png",
+        "ratingnone":"./src/assets/images/ratingnone.png"
+        
+    }
+]

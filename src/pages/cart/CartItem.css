@@ -1,0 +1,28 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .cart-item div {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .cart-item input {
+    width: 80px;
+    padding: 5px;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+  }
+  

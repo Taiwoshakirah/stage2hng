@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+
+.upperline, form{
+   margin-bottom: -2px;
+}
+
+.logo {
+    font-weight: 400;
+    line-height: 70.94px;
+    font-family: "Kurale", serif;
+    color: #fff;
+  }
+  .mobile{
+    background-color: #007bff;
+  }
+  .input{
+    width: 100%;
+    padding: 8px;
+  }
+

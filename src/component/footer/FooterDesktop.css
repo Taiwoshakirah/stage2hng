@@ -1,0 +1,87 @@
+.maincontainer {
+    background-color: #0056d2;
+    color: white;
+  }
+  .innercontainer {
+    display: grid;
+    gap: 5%;
+    grid-template-columns: 1fr;
+    padding: 3em 2em;
+  }
+  .contact-info {
+    display: flex;
+  }
+  
+  .socialmedia {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+  }
+  .contact img {
+    width: 5%;
+  }
+  .followUs img {
+    width: 10%;
+  }
+  .followUs {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+  }
+  
+  .subscribe {
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 40%;
+  }
+  .copyright {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  .newsletter input {
+    border-radius: 0.5rem;
+    padding: 0.5em 1em;
+    border: 0;
+    background-color: #0056d2;
+  }
+  
+  .input-group {
+    border: 1px solid white;
+    background-color: white;
+    padding: 0.2rem;
+    display: flex;
+    border-radius: 0.5rem;
+  }
+  
+  .input-group input {
+    border: 0px;
+    flex: 2;
+    background-color: whitesmoke;
+    border-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  
+  .input-group button {
+    flex: 1;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border: 0;
+    background-color: #0056d2;
+    color: white;
+  }
+  @media (width> 768px) {
+    .innercontainer {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    }
+  }
