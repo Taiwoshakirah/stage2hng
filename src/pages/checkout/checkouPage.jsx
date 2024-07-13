@@ -34,10 +34,7 @@ const Checkout = () => {
     }
     setPaymentError(false);
     setIsSubmitted(true);
-    // Perform form submission logic here (e.g., sending data to server, redirecting)
     console.log("Form submitted:", formData);
-
-    // Example: Redirect to a thank you page after successful form submission
   };
 
   const handleChange = (e) => {
