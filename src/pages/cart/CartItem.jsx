@@ -1,22 +1,21 @@
 import React from "react";
 import "./CartItem.css";
 
-const CartItem = ({ item, updateQuantity }) => {
-  const handleChange = (e) => {
-    updateQuantity(item.id, parseInt(e.target.value));
-  };
-
+const CartItem = ({ item, handleMinusQuantity, handlePlusQuantity, handleRemoveItem }) => {
   return (
     <div className="cart-item">
-      <img src={item.image} alt={item.name} />
-      <div>NGN {item.price.toLocaleString()}</div>
-      <div>
-        <input
-          type="number"
-          value={item.quantity}
-          min="1"
-          onChange={handleChange}
-        />
+      <div className="product">
+        <img src={item.image} alt={item.name} />
+        <span>{item.name}</span>
+      </div>
+      <div className="price">{item.price}</div>
+      <div className="quantity">
+        <button onClick={() => handleMinusQuantity(item.id)}>-</button>
+        <span>{item.quantity}</span>
+        <button onClick={() => handlePlusQuantity(item.id)}>+</button>
+      </div>
+      <div className="remove">
+        <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
       </div>
     </div>
   );

@@ -1,39 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { removeFromCart, updateQuantity, clearCart } from "../../stores/cart";
 import CartItem from "./CartItem";
-import twopiece from "../../assets/images/twopiece.png";
-import twopiece2 from "../../assets/images/twopiece2.png";
 import "./Cart.css";
-import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const initialItems = [
-    {
-      id: 1,
-      price: 25000,
-      quantity: 1,
-      image: twopiece,
-    },
-    {
-      id: 2,
-      price: 18000,
-      quantity: 1,
-      image: twopiece2,
-    },
-  ];
+  const cartItems = useSelector((state) => state.cart.items);
+  const subtotal = useSelector((state) => state.cart.subtotal);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const [items, setItems] = useState(initialItems);
-
-  const updateQuantity = (id, quantity) => {
-    const updatedItems = items.map((item) =>
-      item.id === id ? { ...item, quantity } : item
-    );
-    setItems(updatedItems);
+  const handleMinusQuantity = (id) => {
+    dispatch(updateQuantity({ productId: id, quantity: -1 }));
   };
 
-  const subtotal = items.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+  const handlePlusQuantity = (id) => {
+    dispatch(updateQuantity({ productId: id, quantity: 1 }));
+  };
+
+  const handleRemoveItem = (id) => {
+    dispatch(removeFromCart(id));
+  };
+
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
+
+  const handleCheckout = () => {
+    navigate("/checkout");
+  };
+
+  const [totalQuantity, setTotalQuantity] = useState(0);
+  const carts = useSelector((store) => store.cart.items);
+  
+  useEffect(() => {
+    let total = 0;
+    carts.forEach(item => total += item.quantity);
+    setTotalQuantity(total);
+  }, [carts]);
+
+  if(cartItems.length === 0){
+        return (
+            <div className="text-center">
+            <h2 className=''>Your cart is empty</h2>
+              <Link to={'/'}>
+                  <p>back to products</p>
+              </Link>
+            </div>
+        );
+      }
 
   return (
     <div className="cart-container container">
@@ -45,26 +61,19 @@ const Cart = () => {
             <div>Price</div>
             <div>Quantity</div>
           </div>
-          {items.map((item) => (
+          {cartItems.map((item) => (
             <CartItem
               key={item.id}
               item={item}
-              updateQuantity={updateQuantity}
+              handleMinusQuantity={handleMinusQuantity}
+              handlePlusQuantity={handlePlusQuantity}
+              handleRemoveItem={handleRemoveItem}
+              
             />
           ))}
           <div className="cart-actions">
-            <button
-              className="return"
-              onClick={() => console.log("Return to shop")}
-            >
-              Return To Shop
-            </button>
-            <button
-              className="updatenow"
-              onClick={() => console.log("Update cart")}
-            >
-              Update Cart
-            </button>
+            <Link to="/"><button className="return">Return To Shop</button></Link>
+            <button onClick={handleClearCart} className="updatenow">Clear Cart</button>
           </div>
         </div>
         <div className="cart-total w-sm-100">
@@ -85,9 +94,9 @@ const Cart = () => {
             <input type="text" placeholder="Coupon Code" />
             <button className="w-sm-100">Apply Coupon</button>
           </div>
-          <Link to="/check">
-            <button className="checkout-btn rounded-3 mt-3">Proceed to checkout</button>
-          </Link>
+          <button className="checkout-btn rounded-3 mt-3" onClick={handleCheckout}>
+            Proceed to checkout
+          </button>
         </div>
       </div>
     </div>
@@ -95,3 +104,125 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+
+
+
+
+
+// import React, { useState, useEffect } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import { Link } from "react-router-dom";
+// import { removeFromCart, updateQuantity, clearCart } from "../../stores/cart";
+// import CartItem from "./CartItem";
+// import "./Cart.css";
+
+// const Cart = () => {
+//   const cartItems = useSelector((state) => state.cart.items);
+//   const subtotal = useSelector((state) => state.cart.subtotal);
+//   const total = useSelector((state) => state.cart.total);
+//   const dispatch = useDispatch();
+
+//   const handleMinusQuantity = (id) => {
+//     dispatch(updateQuantity({ productId: id, quantity: -1 }));
+//   };
+
+//   const handlePlusQuantity = (id) => {
+//     dispatch(updateQuantity({ productId: id, quantity: 1 }));
+//   };
+
+//   const handleRemoveItem = (id) => {
+//     dispatch(removeFromCart(id));
+//   };
+
+//   const handleClearCart = () => {
+//     dispatch(clearCart());
+//   };
+
+//   const [totalQuantity, setTotalQuantity] = useState(0);
+//   const carts = useSelector((store) => store.cart.items);
+  
+//   useEffect(() => {
+//     let total = 0;
+//     carts.forEach(item => total += item.quantity);
+//     setTotalQuantity(total);
+//   }, [carts]);
+
+
+  
+
+//   if(cartItems.length === 0){
+//     return (
+//         <div className="text-center">
+//         <h2 className=''>Your cart is empty</h2>
+//           <Link to={'/'}>
+//               <p>back to products</p>
+//           </Link>
+//         </div>
+      
+//     );
+//   }
+
+//   return (
+//     <div className="cart-container container">
+//       <h1>Cart</h1>
+//       <div className="d-lg-flex cartbox">
+//         <div className="cartwith">
+//           <div className="cart-header">
+//             <div>Product</div>
+//             <div>Price</div>
+//             <div>Quantity</div>
+//           </div>
+//           {cartItems.map((item) => (
+//             <CartItem
+//               key={item.productId}
+//               item={item}
+//               handleMinusQuantity={handleMinusQuantity}
+//               handlePlusQuantity={handlePlusQuantity}
+//               handleRemoveItem={handleRemoveItem}
+//             />
+//           ))}
+//           <div className="cart-actions">
+//             <Link to="/"><button
+//               className="return"
+//               onClick={() => console.log("Return to shop")}
+//             >
+//               Return To Shop
+//             </button></Link>
+//             <button
+//               className="updatenow"
+//               onClick={() => console.log("Update cart")}
+//             >
+//               Update Cart
+//             </button>
+//           </div>
+//         </div>
+//         <div className="cart-total w-sm-100">
+//           <h2>Cart Total</h2>
+//           <div className="total-row">
+//             <span>Subtotal:</span>
+//             <span>NGN {subtotal.toLocaleString()}</span>
+//           </div>
+//           <div className="total-row">
+//             <span>Shipping:</span>
+//             <span>Free</span>
+//           </div>
+//           <div className="total-row">
+//             <span>Total:</span>
+//             <span>NGN {subtotal.toLocaleString()}</span>
+//           </div>
+//           <div className="coupon">
+//             <input type="text" placeholder="Coupon Code" />
+//             <button className="w-sm-100">Apply Coupon</button>
+//           </div>
+//           <Link to="/check">
+//             <button className="checkout-btn rounded-3 mt-3">Proceed to checkout</button>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Cart;

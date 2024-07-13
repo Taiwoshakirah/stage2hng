@@ -43,3 +43,18 @@
 .input-group-text {
   height: calc(1.5em + 1rem + 2px);
 }
+
+.spanzero{
+  border: 1px solid black;
+  font-size: 10px;
+  padding: 1px 6px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: #ffffff;
+  font-weight: bold;
+  left: -0.5rem;
+  top: 0;
+  margin-right: 5px;
+  color: red;
+
+}

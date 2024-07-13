@@ -1,10 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import "./LandingPage.css";
 import ankaraimg from "../../assets/images/ankara.png";
 import vibrance from "../../assets/images/vibrance.png";
 import eko from "../../assets/images/eko.png";
-import productData from "../../products/product";
+// import productData from "../../products/product";
 import bagimg from "../../assets/images/bagimg.png";
 import earing from "../../assets/images/earrings.png";
 import Zipgown from "../../assets/images/kimon.png";
@@ -15,8 +13,20 @@ import rate from "../../assets/images/rating.png";
 import norate from "../../assets/images/ratingnone.png";
 import mobile from "../../assets/images/mobile.png";
 import GrommetIconsFormNextLink from "./GrommetIcon";
+import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import Product from "../Product"
+import { addToCart } from "../../stores/cart";
+
 
 const LandingPage = () => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
+
   return (
     <div>
       <section>
@@ -66,15 +76,15 @@ const LandingPage = () => {
           </div>
         </div>
         <div className="center-container">
-        <button className=" text-white rounded-4 border-0 py-2 custom-button">
-          Shop New Collection
-        </button>
+          <button className=" text-white rounded-4 border-0 py-2 custom-button">
+            Shop New Collection
+          </button>
         </div>
       </section>
       <div className="container">
         <h2 className="text-center our-product">Our Products</h2>
         <div className="categories">
-          <ul className="gap-5 d-flex  overflow-auto listitems mt-5">
+          <ul className="gap-5 d-flex overflow-auto listitems mt-5">
             <li className="text-decoration-none">
               <a href="">Top</a>
             </li>
@@ -96,30 +106,7 @@ const LandingPage = () => {
           </ul>
         </div>
       </div>
-      <section className="product-list container">
-        {productData.map(({ id, image, description, price, rate, norate }) => (
-          <div key={id} className="product">
-            <div>
-              <img className="mt-5 px-4 mw-100" src={image} alt={description} />
-              <Link className="text-decoration-none" to="/cart">
-                <button className="addcartbtn py-2 text-white">
-                  Add To Cart
-                </button>
-              </Link>
-              <p className="text-center description">{description}</p>
-              <p className="text-center price">{price}</p>
-              <div className="text-center">
-                <img src={rate} alt="rating" />
-                <img src={rate} alt="rating" />
-                <img src={rate} alt="rating" />
-                <img src={rate} alt="rating" />
-                <img src={norate} alt="no rating" />
-              </div>
-            </div>
-          </div>
-        ))}
-      </section>
-
+      <Product addToCart={handleAddToCart} />
       <div className="container cover">
         <Link className="text-decoration-none mt-5 seemorebtn py-2 rounded-3 text-white w-75 px-3">
           See More
@@ -128,9 +115,9 @@ const LandingPage = () => {
       </div>
       <p className="text-center pt-3 best-seller">Our Best Seller</p>
       <section className="container">
-        <div className="d-flex text-center gap-5 align-items-center  bestseller">
+        <div className="d-flex text-center gap-5 align-items-center bestseller">
           <div>
-            <div className="d-flex flex-column ">
+            <div className="d-flex flex-column">
               <img src={Zipgown} alt="" />
               <Link className="text-decoration-none" to="/cart">
                 <button className="w-100 px-3">Add Cart</button>
@@ -202,6 +189,8 @@ const LandingPage = () => {
       <p className="text-center category container">Browse By Category</p>
       <section className="container">
         <div className="d-flex overflow-auto justify-content-between gap-5 mb-5 px-4 mt-5">
+          <img src={earing} alt="" />
+          <img src={earing} alt="" />
           <img src={earing} alt="" />
           <img src={earing} alt="" />
           <img src={earing} alt="" />
